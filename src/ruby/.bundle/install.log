@@ -1,0 +1,443 @@
+# Logfile created on 2013-12-29 14:12:53 -0400 by logger.rb/41954
+I, [2013-12-29T14:12:53.359921 #8328]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+E, [2013-12-29T14:12:54.432982 #8328] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+    c:/Ruby200/bin/ruby.exe extconf.rb 
+creating Makefile
+
+make "DESTDIR="
+generating generator-i386-mingw32.def
+compiling generator.c
+In file included from c:/Ruby200/include/ruby-2.0.0/ruby.h:33:0,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:125:14: error: size of array 'ruby_check_sizeof_voidp' is negative
+In file included from c:/Ruby200/include/ruby-2.0.0/ruby.h:33:0,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_float_value':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:826:13: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_num2char_inline':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_class_of':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1515:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_type':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1532:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+In file included from generator.c:1:0:
+../fbuffer/fbuffer.h: In function 'fbuffer_append_str':
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'convert_UTF8_to_JSON_ASCII':
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'convert_UTF8_to_JSON':
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mHash_to_json':
+generator.c:330:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mArray_to_json':
+generator.c:342:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFixnum_to_json':
+generator.c:352:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mBignum_to_json':
+generator.c:362:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFloat_to_json':
+generator.c:372:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mString_to_json':
+generator.c:394:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mTrueClass_to_json':
+generator.c:449:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFalseClass_to_json':
+generator.c:459:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mNilClass_to_json':
+generator.c:469:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_configure':
+generator.c:524:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'set_state_ivars':
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_to_h':
+generator.c:630:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'generate_json_object':
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'generate_json_array':
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_prepare_buffer':
+generator.c:860:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_partial_generate':
+generator.c:890:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'isArrayOrObject':
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_generate':
+generator.c:920:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_initialize':
+generator.c:950:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_init_copy':
+generator.c:968:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:969:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_indent':
+generator.c:1012:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_indent_set':
+generator.c:1024:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space':
+generator.c:1049:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_set':
+generator.c:1062:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_before':
+generator.c:1086:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_before_set':
+generator.c:1098:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_object_nl':
+generator.c:1123:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_object_nl_set':
+generator.c:1136:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_array_nl':
+generator.c:1159:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_array_nl_set':
+generator.c:1171:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_check_circular_p':
+generator.c:1196:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_max_nesting':
+generator.c:1208:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_max_nesting_set':
+generator.c:1220:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_allow_nan_p':
+generator.c:1233:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_ascii_only_p':
+generator.c:1245:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_quirks_mode_p':
+generator.c:1256:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_quirks_mode_set':
+generator.c:1267:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_depth':
+generator.c:1279:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_depth_set':
+generator.c:1291:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_buffer_initial_length':
+generator.c:1304:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_buffer_initial_length_set':
+generator.c:1317:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+make: *** [generator.o] Error 1
+
+
+Gem files will remain installed in c:/Ruby200/lib/ruby/gems/2.0.0/gems/json-1.8.1 for inspection.
+Results logged to c:/Ruby200/lib/ruby/gems/2.0.0/gems/json-1.8.1/ext/json/ext/generator/gem_make.out
+
+c:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:62:in `run'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:35:in `block in make'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:28:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:28:in `make'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:45:in `block in build'  \nc:/Ruby200/lib/ruby/2.0.0/tempfile.rb:324:in `open'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:19:in `build'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:689:in `block (3 levels) in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:688:in `chdir'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:688:in `block (2 levels) in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:687:in `synchronize'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:687:in `block in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:662:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:662:in `build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:227:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:101:in `block in install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby200/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby200/bin/bundle:23:in `load'  \nc:/Ruby200/bin/bundle:23:in `<main>'
+I, [2013-12-29T14:16:32.541457 #4944]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+E, [2013-12-29T14:16:33.510512 #4944] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+    c:/Ruby200/bin/ruby.exe extconf.rb 
+creating Makefile
+
+make "DESTDIR="
+generating generator-i386-mingw32.def
+compiling generator.c
+In file included from c:/Ruby200/include/ruby-2.0.0/ruby.h:33:0,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:125:14: error: size of array 'ruby_check_sizeof_voidp' is negative
+In file included from c:/Ruby200/include/ruby-2.0.0/ruby.h:33:0,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_float_value':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:826:13: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_num2char_inline':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1214:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1215:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_class_of':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1515:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h: In function 'rb_type':
+c:/Ruby200/include/ruby-2.0.0/ruby/ruby.h:1532:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+In file included from generator.c:1:0:
+../fbuffer/fbuffer.h: In function 'fbuffer_append_str':
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+../fbuffer/fbuffer.h:118:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'convert_UTF8_to_JSON_ASCII':
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:129:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:130:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'convert_UTF8_to_JSON':
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:227:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:228:25: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mHash_to_json':
+generator.c:330:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mArray_to_json':
+generator.c:342:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFixnum_to_json':
+generator.c:352:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mBignum_to_json':
+generator.c:362:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFloat_to_json':
+generator.c:372:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mString_to_json':
+generator.c:394:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mTrueClass_to_json':
+generator.c:449:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mFalseClass_to_json':
+generator.c:459:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'mNilClass_to_json':
+generator.c:469:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_configure':
+generator.c:524:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:532:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:533:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:540:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:541:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:548:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:549:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:556:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:557:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:564:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:565:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'set_state_ivars':
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:613:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:615:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_to_h':
+generator.c:630:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'generate_json_object':
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:700:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'generate_json_array':
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:746:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_prepare_buffer':
+generator.c:860:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_partial_generate':
+generator.c:890:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'isArrayOrObject':
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:902:23: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:903:15: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_generate':
+generator.c:920:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_initialize':
+generator.c:950:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_init_copy':
+generator.c:968:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:969:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_indent':
+generator.c:1012:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_indent_set':
+generator.c:1024:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1026:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1035:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space':
+generator.c:1049:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_set':
+generator.c:1062:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1064:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1073:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_before':
+generator.c:1086:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_space_before_set':
+generator.c:1098:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1100:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1109:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_object_nl':
+generator.c:1123:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_object_nl_set':
+generator.c:1136:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1146:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_array_nl':
+generator.c:1159:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_array_nl_set':
+generator.c:1171:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1173:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c:1181:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_check_circular_p':
+generator.c:1196:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_max_nesting':
+generator.c:1208:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_max_nesting_set':
+generator.c:1220:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_allow_nan_p':
+generator.c:1233:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_ascii_only_p':
+generator.c:1245:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_quirks_mode_p':
+generator.c:1256:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_quirks_mode_set':
+generator.c:1267:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_depth':
+generator.c:1279:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_depth_set':
+generator.c:1291:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_buffer_initial_length':
+generator.c:1304:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+generator.c: In function 'cState_buffer_initial_length_set':
+generator.c:1317:5: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+make: *** [generator.o] Error 1
+
+
+Gem files will remain installed in c:/Ruby200/lib/ruby/gems/2.0.0/gems/json-1.8.1 for inspection.
+Results logged to c:/Ruby200/lib/ruby/gems/2.0.0/gems/json-1.8.1/ext/json/ext/generator/gem_make.out
+
+c:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:62:in `run'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:35:in `block in make'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:28:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/builder.rb:28:in `make'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:45:in `block in build'  \nc:/Ruby200/lib/ruby/2.0.0/tempfile.rb:324:in `open'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:19:in `build'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:689:in `block (3 levels) in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:688:in `chdir'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:688:in `block (2 levels) in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:687:in `synchronize'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:687:in `block in build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:662:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:662:in `build_extensions'  \nc:/Ruby200/lib/ruby/2.0.0/rubygems/installer.rb:227:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:101:in `block in install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby200/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \nc:/Ruby200/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby200/lib/ruby/gems/2.0.0/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby200/bin/bundle:23:in `load'  \nc:/Ruby200/bin/bundle:23:in `<main>'
+I, [2013-12-29T14:29:42.773656 #8664]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+I, [2013-12-29T14:29:48.518984 #8664]  INFO -- : 0:  json (1.8.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/json-1.8.1.gemspec
+I, [2013-12-29T14:29:50.137077 #8664]  INFO -- : 0:  uglifier (2.4.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/uglifier-2.4.0.gemspec
+I, [2013-12-29T14:29:50.138077 #8664]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
+I, [2013-12-29T14:29:56.592446 #4120]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+I, [2013-12-29T14:29:56.593446 #4120]  INFO -- : 0:  json (1.8.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/json-1.8.1.gemspec
+I, [2013-12-29T14:29:56.595446 #4120]  INFO -- : 0:  uglifier (2.4.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/uglifier-2.4.0.gemspec
+I, [2013-12-29T14:29:56.596446 #4120]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
+I, [2013-12-29T19:09:47.120809 #3508]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+I, [2013-12-29T19:09:47.121809 #3508]  INFO -- : 0:  json (1.8.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/json-1.8.1.gemspec
+I, [2013-12-29T19:09:47.122809 #3508]  INFO -- : 0:  uglifier (2.4.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/uglifier-2.4.0.gemspec
+I, [2013-12-29T19:10:13.467316 #3508]  INFO -- : 0:  yui-compressor (0.12.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/yui-compressor-0.12.0.gemspec
+I, [2013-12-29T19:10:13.468316 #3508]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
+I, [2013-12-29T19:21:54.559416 #8036]  INFO -- : 0:  execjs (2.0.2) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/execjs-2.0.2.gemspec
+I, [2013-12-29T19:21:54.561417 #8036]  INFO -- : 0:  json (1.8.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/json-1.8.1.gemspec
+I, [2013-12-29T19:21:54.563417 #8036]  INFO -- : 0:  uglifier (2.4.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/uglifier-2.4.0.gemspec
+I, [2013-12-29T19:21:54.565417 #8036]  INFO -- : 0:  yui-compressor (0.12.0) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/yui-compressor-0.12.0.gemspec
+I, [2013-12-29T19:21:54.566417 #8036]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby200/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
