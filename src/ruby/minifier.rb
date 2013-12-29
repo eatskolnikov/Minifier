@@ -12,13 +12,13 @@ OptionParser.new do |opts|
 	puts hash_options[:s]
   end
   opts.on('-d [ARG]', '--destination_path [ARG]', "Specify the destination folder, if unspecified the source folder will be mirrored on server root") do |v=''|
-    hash_options[:argument_b] = v
+    hash_options[:destination_path] = v
   end
   opts.on('-f [arg]', '--ftp_config_file [arg]', "Specify the path to the file containing the ftp server url and credentials") do |v|
     hash_options[:ftp_config_file] = v
   end
   opts.on('--version', 'Display the version') do 
-    puts "VERSION"
+    puts "0.1"
     exit
   end
   opts.on('-h', '--help', 'Display this help') do 
@@ -26,28 +26,28 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
-puts hash_options
 
 if !Dir::exist?(hash_options[:s])
 	puts 'The specified source path is not valid or doesnt exists'
 	puts "'" << hash_options[:s] << "'"
 	exit
 end
-
 if !hash_options[:ftp_config_file] == nil or !File::exist?(hash_options[:ftp_config_file])
 	puts 'The specified ftp config file path is not valid'
 	puts "'" << hash_options[:ftp_config_file] << "'"
 	exit
 end
+
 ftp_configs = {}
 lines=File.open(hash_options[:ftp_config_file]).readlines
-
 ftp_configs[:server] = lines[0];
 ftp_configs[:user] = lines[1];
 ftp_configs[:pwd] = lines[2];
 
 @tmpdir = Dir.mktmpdir("jsau_tmp") 
 @original_path = hash_options[:s]
+@destination = hash_options[:destination_path]
+
 def minify(path, parents='/')
 	puts path
 	Dir.foreach(path) do |f|
@@ -57,6 +57,7 @@ def minify(path, parents='/')
 			minify(next_path, next_path.sub(@original_path,""))
 		else
 			if(File.extname(f) == ".js" or File.extname(f) == ".css")
+				
 				FileUtils.mkpath(@tmpdir+parents) if(!Dir.exists?(@tmpdir+parents))
 				open(File.join(@tmpdir+parents, f), "w") do |tmpfile| 
 					if(f.include? "min.js" or f.include? "min.css")
@@ -73,6 +74,7 @@ def minify(path, parents='/')
 end
 
 minify(hash_options[:s])
+
 
 #Net::FTP.open('example.com') do |ftp|
 #  ftp.login
