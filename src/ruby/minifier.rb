@@ -37,46 +37,67 @@ if !hash_options[:ftp_config_file] == nil or !File::exist?(hash_options[:ftp_con
 	puts "'" << hash_options[:ftp_config_file] << "'"
 	exit
 end
+if hash_options[:destination_path] == nil
+	hash_options[:destination_path] = ''
+end
 
 ftp_configs = {}
 lines=File.open(hash_options[:ftp_config_file]).readlines
-ftp_configs[:server] = lines[0];
-ftp_configs[:user] = lines[1];
-ftp_configs[:pwd] = lines[2];
+ftp_configs[:host] = lines[0].gsub("\n","").gsub("\r","");
+ftp_configs[:user] = lines[1].gsub("\n","").gsub("\r","");
+ftp_configs[:pwd] = lines[2].gsub("\n","").gsub("\r","");
 
 @tmpdir = Dir.mktmpdir("jsau_tmp") 
-@original_path = hash_options[:s]
 @destination = hash_options[:destination_path]
+@original_source = hash_options[:s]
 
-def minify(path, parents='/')
-	puts path
-	Dir.foreach(path) do |f|
-		next if f == '.' or f == '..'
-		next_path = File.join(path, f)
-		if(File.directory?(next_path))
-			minify(next_path, next_path.sub(@original_path,""))
-		else
-			if(File.extname(f) == ".js" or File.extname(f) == ".css")
-				
-				FileUtils.mkpath(@tmpdir+parents) if(!Dir.exists?(@tmpdir+parents))
-				open(File.join(@tmpdir+parents, f), "w") do |tmpfile| 
-					if(f.include? "min.js" or f.include? "min.css")
-						tmpfile.write File.read(next_path)
-					else
-						compressor = YUI::CssCompressor.new if File.extname(f) == ".css"
-						compressor = YUI::JavaScriptCompressor.new if File.extname(f) == ".js"
-						tmpfile.write compressor.compress File.read(next_path)
-					end
-				end
+moveToFtp = Proc.new do |f,d|
+	puts @destination+d
+	
+	Net::FTP.open(ftp_configs[:host],ftp_configs[:user],ftp_configs[:pwd]) do |ftp|
+		ftp.login
+		ftp.mkdir(@destination+d)
+		ftp.put(f, File.join(@destination+d,f))
+		ftp.close
+	end
+end
+
+minify = Proc.new do |f,d|
+	d = @tmpdir+d
+	if(File.extname(f) == ".js" or File.extname(f) == ".css")
+		FileUtils.mkpath(d) if(!Dir.exists?(d))
+		open(d+File.basename(f),"w") do |tmpfile| 
+			if(f.include? "min.js" or f.include? "min.css")
+				tmpfile.write File.read(f)
+			else
+				puts f
+				compressor = YUI::CssCompressor.new if File.extname(f) == ".css"
+				compressor = YUI::JavaScriptCompressor.new if File.extname(f) == ".js"
+				tmpfile.write compressor.compress File.read(f)
 			end
 		end
 	end
 end
+def applyToTree(path, action, root=@original_source)
+	Dir.foreach(path) do |f|
+		next if f == '.' or f == '..'
+		next_path = File.join(path, f)
+		if(File.directory?(next_path))
+			applyToTree(next_path, action,root)
+		else
+			action.call(next_path, next_path.sub(root,"").sub(File.basename(next_path),""))
+		end
+	end
+end
 
-minify(hash_options[:s])
+puts "Minifying..."
+applyToTree(hash_options[:s],minify)
+puts "Moving to FTP server..."
+applyToTree(@tmpdir,moveToFtp,@tmpdir)
 
 
-#Net::FTP.open('example.com') do |ftp|
+
+#Net::FTP.open(ftp_configs[:host],ftp_configs[:user],ftp_configs[:pwd]) do |ftp|
 #  ftp.login
 #  files = ftp.chdir('pub/lang/ruby/contrib')
 #  files = ftp.list('n*')
