@@ -52,12 +52,20 @@ ftp_configs[:pwd] = lines[2].gsub("\n","").gsub("\r","");
 @original_source = hash_options[:s]
 
 moveToFtp = Proc.new do |f,d|
-	puts @destination+d
-	
+	destination_path = @destination+d
 	Net::FTP.open(ftp_configs[:host],ftp_configs[:user],ftp_configs[:pwd]) do |ftp|
-		ftp.login
-		ftp.mkdir(@destination+d)
-		ftp.put(f, File.join(@destination+d,f))
+		curr_folder = ""
+		folders = destination_path.split("/")
+		folders.each do |folder_name| 
+			curr_folder += folder_name+'/'
+			begin
+				ftp.mkdir(curr_folder)
+			rescue
+				next
+			end
+		end
+		puts File.join(@destination+d,File.basename(f))
+		ftp.put(f, File.join(@destination+d,File.basename(f)))
 		ftp.close
 	end
 end
@@ -92,7 +100,7 @@ end
 
 puts "Minifying..."
 applyToTree(hash_options[:s],minify)
-puts "Moving to FTP server..."
+puts "Uploading to FTP server..."
 applyToTree(@tmpdir,moveToFtp,@tmpdir)
 
 
